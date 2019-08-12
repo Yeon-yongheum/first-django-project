@@ -27,4 +27,5 @@ urlpatterns = [
     path('', views.index),
     path('hello/<str:name>/', views.hello),
     path('lotto/', views.lotto),
+    path('dinner/', views.dinner),
 ]
