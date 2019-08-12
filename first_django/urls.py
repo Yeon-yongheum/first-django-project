@@ -28,4 +28,6 @@ urlpatterns = [
     path('hello/<str:name>/', views.hello),
     path('lotto/', views.lotto),
     path('dinner/', views.dinner),
+    path('cube/<int:숫자>/', views.cube),
+    path('about/<str:name>/<int:age>/',views.about),
 ]

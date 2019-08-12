@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'index.html')
 
 def hello(request, name):
-    context = {'name' : name}
+    context = {'name': name}
     return render(request, 'hello.html', context)
 
 def lotto(request):
@@ -41,3 +41,19 @@ def dinner(request):
         'google_link': 'https://www.google/com'
     }
     return render(request, 'dinner.html', context)
+
+def cube(request, 숫자):
+    context = {
+        'result': 숫자**3,
+        '숫자': 숫자,
+        'numbers': [0,1,2],
+        'students': {'ab': 'ab!!!', 'cd': 'cd!!!!!'},
+    }
+    return render(request, 'cube.html', context)
+
+def about(request, name, age):
+    context = {
+        'name': name,
+        'age': age,
+    }
+    return render(request, 'about.html', context)
