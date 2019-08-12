@@ -75,7 +75,7 @@ $ cd __프로젝트 이름/폴더 이름__
 ```
 
 ```bash
-$ django-admin startproject __프로젝트이름__ .
+$ django-admin startproject __프로젝트이름__ . 
 ```
 
 * 프로젝트이름으로 구성된 폴더와, `manage.py`가 생성된다.
