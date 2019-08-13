@@ -57,3 +57,59 @@ def about(request, name, age):
         'age': age,
     }
     return render(request, 'about.html', context)
+
+def isitgwangbok(request):
+    # context = {
+    #     'datetime_now': str(datetime.date.today())
+    # }
+    # return render(request, 'isitgwangbok.html',context)
+    now = datetime.datetime.now()
+    if now.month == 8 and now.day == 15:
+        result = True
+    else:
+        result = False
+        context = {
+            'result': result
+        }
+    return render(request, 'isitgwangbok.html', context)
+
+def ping(request):
+    return render(request, 'ping.html')    
+
+def pong(request):
+    # 사용자가 넘겨주는 값 받아오기
+    # print(request.GET)# QueryDict
+    data = request.GET.get('data')
+    context = {
+        'data': data
+    }
+    return render(request, 'pong.html', context)
+
+def signup(request):
+    return render(request, 'signup.html')
+
+def signup_result(request):
+    name = request.POST.get('name')
+    psw = request.POST.get('psw')
+    psw_confirm = request.POST.get('psw_confirm')
+    is_signup = True
+    # yesorno = True
+    # if psw == psw_confirm:
+    #     result = f'{name}님 회원가입 되셨습니다.'
+    # else:
+    #     result = f'{name}님 비밀번호가 같지 않습니다.'
+    #     yesorno = False
+    # context = {
+    #     'result': result,
+    #     'yesorno': yesorno
+    # }
+    if psw == psw_confirm:
+        is_signup = True
+    else:
+        is_signup = False
+    
+    context = {
+        'is_signup': is_signup,
+        'name': name
+    }
+    return render(request, 'signup_result.html', context)

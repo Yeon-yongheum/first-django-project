@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from pages import views
+
 # 1. url 설정
 # pages app의 views.py 파일 불러오기
-from pages import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 1. url 설정
     # path(url, 해당하는 views의 함수)
     path('', views.index),
     path('hello/<str:name>/', views.hello),
@@ -30,4 +30,9 @@ urlpatterns = [
     path('dinner/', views.dinner),
     path('cube/<int:숫자>/', views.cube),
     path('about/<str:name>/<int:age>/',views.about),
+    path('isitgwangbok/',views.isitgwangbok),
+    path('ping/', views.ping),
+    path('pong/', views.pong),
+    path('signup/', views.signup),
+    path('signup_result/', views.signup_result),
 ]
