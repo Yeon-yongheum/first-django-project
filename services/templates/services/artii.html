@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block css %}
+
+{% endblock %}
+
+
+{% block body %}
+<form action="/services/artii_result/">
+  <label for="string">글자를 써주세요</label>
+  <input id="string" type="text" name="string">
+  <br>
+  <label for="font">폰트를 골라 주세요</label>
+  <br>
+  <input type="radio" name="font" value="rounded"> rounded
+  <input type="radio" name="font" value="alligator"> alligator
+  <input type="radio" name="font" value="acrobatic"> acrobatic
+  <input type="radio" name="font" value="short"> short
+  <input type="radio" name="font" value="type_set"> type_set
+  <br>
+  <input type="submit" value="출력">
+</form>
+<a href="/services/">홈으로 돌아가기</a>
+{% endblock %}

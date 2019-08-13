@@ -21,4 +21,5 @@ urlpatterns = [
     # 각 앱별로 따로 urls.py를 정의하여 관리함.
     path('pages/', include('pages.urls')),
     path('services/', include('services.urls')),
+    path('num/', include('num.urls')),
 ]

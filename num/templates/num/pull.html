@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% endblock %}
+
+
+{% block body %}
+<form>
+  <h1>Pull Number</h1>
+  <h2>Pull해보니 <strong>{{ num }}</strong>입니다!</h2>
+  <a href="/num/push/">다시 입력하기</a>
+</form>
+<br>
+<a href="/num/">home</a>
+{% endblock %}
