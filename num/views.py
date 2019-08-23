@@ -13,3 +13,6 @@ def pull(request):
         'num': num
     }
     return render(request,'num/pull.html', context)
+
+def index_2(request):
+    return render(request, 'index_2.html')

@@ -143,7 +143,6 @@ from pages import views
 
 urlpatterns = [
     path(''. views.index),
-    
 ]
 ```
 

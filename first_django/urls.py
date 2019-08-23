@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from pages import views
+from num import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 각 앱별로 따로 urls.py를 정의하여 관리함.
     path('pages/', include('pages.urls')),
     path('services/', include('services.urls')),
     path('num/', include('num.urls')),
+    path('',views.index_2)
 ]
